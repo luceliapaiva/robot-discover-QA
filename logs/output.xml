@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.8.10 on win32)" generated="20231114 10:12:08.346" rpa="false" schemaversion="3">
+<suite id="s1" name="Signup" source="C:\QAx\projects\walkdog-robot\tests\signup.robot">
+<test id="s1-t1" name="Deve poder cadastrar um novo dog walker" line="10">
+<kw name="Start session" library="base" type="SETUP">
+<kw name="New Browser" library="Browser">
+<arg>browser=${BROWSER}</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20231114 10:14:27.413" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\QAx\\projects\\walkdog-robot\\logs\\browser\\traces\\326c1d6b-fd7d-4b73-918d-9d36b6ba08f4"}</msg>
+<msg timestamp="20231114 10:14:27.413" level="INFO">ROBOT_FRAMEWORK_BROWSER_NODE_PORT 49400 defined in env skipping Browser process start</msg>
+<msg timestamp="20231114 10:15:25.417" level="FAIL">Could not connect to the playwright process at port 49400.</msg>
+<status status="FAIL" starttime="20231114 10:14:27.398" endtime="20231114 10:15:25.448"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>https://walkdog.vercel.app</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="NOT RUN" starttime="20231114 10:15:25.448" endtime="20231114 10:15:25.448"/>
+</kw>
+<kw name="Wait For Elements State" library="Browser">
+<arg>css=h1 &gt;&gt; text=Cuidado e diversão em cada passo</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="NOT RUN" starttime="20231114 10:15:25.448" endtime="20231114 10:15:25.464"/>
+</kw>
+<status status="FAIL" starttime="20231114 10:14:27.398" endtime="20231114 10:15:25.464"/>
+</kw>
+<kw name="Finish session" library="base" type="TEARDOWN">
+<kw name="Take Screenshot" library="Browser">
+<arg>fullPage=True</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<msg timestamp="20231114 10:15:25.479" level="INFO">ROBOT_FRAMEWORK_BROWSER_NODE_PORT 49400 defined in env skipping Browser process start</msg>
+<msg timestamp="20231114 10:16:22.470" level="FAIL">Could not connect to the playwright process at port 49400.</msg>
+<status status="FAIL" starttime="20231114 10:15:25.479" endtime="20231114 10:16:22.486"/>
+</kw>
+<status status="FAIL" starttime="20231114 10:15:25.464" endtime="20231114 10:16:22.486">Could not connect to the playwright process at port 49400.</status>
+</kw>
+<tag>smoke</tag>
+<status status="FAIL" starttime="20231114 10:13:29.634" endtime="20231114 10:16:22.501">Setup failed:
+Could not connect to the playwright process at port 49400.
+
+Also teardown failed:
+Could not connect to the playwright process at port 49400.</status>
+</test>
+<test id="s1-t2" name="Não deve cadastrar se os campos obrigatórios não forem preenchidos" line="30">
+<kw name="Start session" library="base" type="SETUP">
+<kw name="New Browser" library="Browser">
+<arg>browser=${BROWSER}</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20231114 10:18:16.902" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\QAx\\projects\\walkdog-robot\\logs\\browser\\traces\\e4b7d68a-4ea6-4342-a69d-7107af7db9c7"}</msg>
+<msg timestamp="20231114 10:18:16.902" level="INFO">ROBOT_FRAMEWORK_BROWSER_NODE_PORT 49400 defined in env skipping Browser process start</msg>
+<msg timestamp="20231114 10:19:13.776" level="FAIL">Could not connect to the playwright process at port 49400.</msg>
+<status status="FAIL" starttime="20231114 10:18:16.886" endtime="20231114 10:19:13.776"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>https://walkdog.vercel.app</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="NOT RUN" starttime="20231114 10:19:13.793" endtime="20231114 10:19:13.794"/>
+</kw>
+<kw name="Wait For Elements State" library="Browser">
+<arg>css=h1 &gt;&gt; text=Cuidado e diversão em cada passo</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="NOT RUN" starttime="20231114 10:19:13.796" endtime="20231114 10:19:13.796"/>
+</kw>
+<status status="FAIL" starttime="20231114 10:18:16.886" endtime="20231114 10:19:13.800"/>
+</kw>
+<kw name="Finish session" library="base" type="TEARDOWN">
+<kw name="Take Screenshot" library="Browser">
+<arg>fullPage=True</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<msg timestamp="20231114 10:19:13.811" level="INFO">ROBOT_FRAMEWORK_BROWSER_NODE_PORT 49400 defined in env skipping Browser process start</msg>
+<msg timestamp="20231114 10:20:10.859" level="FAIL">Could not connect to the playwright process at port 49400.</msg>
+<status status="FAIL" starttime="20231114 10:19:13.807" endtime="20231114 10:20:10.859"/>
+</kw>
+<status status="FAIL" starttime="20231114 10:19:13.804" endtime="20231114 10:20:10.859">Could not connect to the playwright process at port 49400.</status>
+</kw>
+<tag>required</tag>
+<status status="FAIL" starttime="20231114 10:17:19.781" endtime="20231114 10:20:10.859">Setup failed:
+Could not connect to the playwright process at port 49400.
+
+Also teardown failed:
+Could not connect to the playwright process at port 49400.</status>
+</test>
+<test id="s1-t3" name="Não deve cadastrar se o cpf for incorreto" line="43">
+<kw name="Start session" library="base" type="SETUP">
+<kw name="New Browser" library="Browser">
+<arg>browser=${BROWSER}</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20231114 10:22:04.740" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\QAx\\projects\\walkdog-robot\\logs\\browser\\traces\\badbd9b3-47d3-4685-b172-8a1dca740fca"}</msg>
+<msg timestamp="20231114 10:22:04.740" level="INFO">ROBOT_FRAMEWORK_BROWSER_NODE_PORT 49400 defined in env skipping Browser process start</msg>
+<msg timestamp="20231114 10:23:01.499" level="FAIL">Could not connect to the playwright process at port 49400.</msg>
+<status status="FAIL" starttime="20231114 10:22:04.724" endtime="20231114 10:23:01.499"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>https://walkdog.vercel.app</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="NOT RUN" starttime="20231114 10:23:01.499" endtime="20231114 10:23:01.499"/>
+</kw>
+<kw name="Wait For Elements State" library="Browser">
+<arg>css=h1 &gt;&gt; text=Cuidado e diversão em cada passo</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="NOT RUN" starttime="20231114 10:23:01.499" endtime="20231114 10:23:01.515"/>
+</kw>
+<status status="FAIL" starttime="20231114 10:22:04.724" endtime="20231114 10:23:01.515"/>
+</kw>
+<kw name="Finish session" library="base" type="TEARDOWN">
+<kw name="Take Screenshot" library="Browser">
+<arg>fullPage=True</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<msg timestamp="20231114 10:23:01.530" level="INFO">ROBOT_FRAMEWORK_BROWSER_NODE_PORT 49400 defined in env skipping Browser process start</msg>
+<msg timestamp="20231114 10:23:58.261" level="FAIL">Could not connect to the playwright process at port 49400.</msg>
+<status status="FAIL" starttime="20231114 10:23:01.515" endtime="20231114 10:23:58.261"/>
+</kw>
+<status status="FAIL" starttime="20231114 10:23:01.515" endtime="20231114 10:23:58.261">Could not connect to the playwright process at port 49400.</status>
+</kw>
+<tag>cpf_inv</tag>
+<status status="FAIL" starttime="20231114 10:21:07.667" endtime="20231114 10:23:58.261">Setup failed:
+Could not connect to the playwright process at port 49400.
+
+Also teardown failed:
+Could not connect to the playwright process at port 49400.</status>
+</test>
+<test id="s1-t4" name="Deve poder cadastrar um novo dog walker que sabe cuidar de pets" line="63">
+<kw name="Start session" library="base" type="SETUP">
+<kw name="New Browser" library="Browser">
+<arg>browser=${BROWSER}</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20231114 10:25:51.880" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\QAx\\projects\\walkdog-robot\\logs\\browser\\traces\\09a5ad78-1922-4116-87f6-3a17dceace67"}</msg>
+<msg timestamp="20231114 10:25:51.880" level="INFO">ROBOT_FRAMEWORK_BROWSER_NODE_PORT 49400 defined in env skipping Browser process start</msg>
+<msg timestamp="20231114 10:26:48.614" level="FAIL">Could not connect to the playwright process at port 49400.</msg>
+<status status="FAIL" starttime="20231114 10:25:51.864" endtime="20231114 10:26:48.614"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>https://walkdog.vercel.app</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="NOT RUN" starttime="20231114 10:26:48.614" endtime="20231114 10:26:48.614"/>
+</kw>
+<kw name="Wait For Elements State" library="Browser">
+<arg>css=h1 &gt;&gt; text=Cuidado e diversão em cada passo</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="NOT RUN" starttime="20231114 10:26:48.614" endtime="20231114 10:26:48.614"/>
+</kw>
+<status status="FAIL" starttime="20231114 10:25:51.864" endtime="20231114 10:26:48.630"/>
+</kw>
+<kw name="Finish session" library="base" type="TEARDOWN">
+<kw name="Take Screenshot" library="Browser">
+<arg>fullPage=True</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<msg timestamp="20231114 10:26:48.646" level="INFO">ROBOT_FRAMEWORK_BROWSER_NODE_PORT 49400 defined in env skipping Browser process start</msg>
+<msg timestamp="20231114 10:27:45.585" level="FAIL">Could not connect to the playwright process at port 49400.</msg>
+<status status="FAIL" starttime="20231114 10:26:48.630" endtime="20231114 10:27:45.585"/>
+</kw>
+<status status="FAIL" starttime="20231114 10:26:48.630" endtime="20231114 10:27:45.585">Could not connect to the playwright process at port 49400.</status>
+</kw>
+<tag>aservice</tag>
+<status status="FAIL" starttime="20231114 10:24:55.059" endtime="20231114 10:27:45.585">Setup failed:
+Could not connect to the playwright process at port 49400.
+
+Also teardown failed:
+Could not connect to the playwright process at port 49400.</status>
+</test>
+<test id="s1-t5" name="Deve poder cadastrar um novo dog walker que sabe adestrar pets" line="84">
+<kw name="Start session" library="base" type="SETUP">
+<kw name="New Browser" library="Browser">
+<arg>browser=${BROWSER}</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20231114 10:29:39.297" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\QAx\\projects\\walkdog-robot\\logs\\browser\\traces\\07e412eb-df84-4896-ab59-b816bc002934"}</msg>
+<msg timestamp="20231114 10:29:39.297" level="INFO">ROBOT_FRAMEWORK_BROWSER_NODE_PORT 49400 defined in env skipping Browser process start</msg>
+<msg timestamp="20231114 10:30:36.134" level="FAIL">Could not connect to the playwright process at port 49400.</msg>
+<status status="FAIL" starttime="20231114 10:29:39.282" endtime="20231114 10:30:36.134"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>https://walkdog.vercel.app</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="NOT RUN" starttime="20231114 10:30:36.134" endtime="20231114 10:30:36.134"/>
+</kw>
+<kw name="Wait For Elements State" library="Browser">
+<arg>css=h1 &gt;&gt; text=Cuidado e diversão em cada passo</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="NOT RUN" starttime="20231114 10:30:36.134" endtime="20231114 10:30:36.150"/>
+</kw>
+<status status="FAIL" starttime="20231114 10:29:39.282" endtime="20231114 10:30:36.150"/>
+</kw>
+<kw name="Finish session" library="base" type="TEARDOWN">
+<kw name="Take Screenshot" library="Browser">
+<arg>fullPage=True</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<msg timestamp="20231114 10:30:36.166" level="INFO">ROBOT_FRAMEWORK_BROWSER_NODE_PORT 49400 defined in env skipping Browser process start</msg>
+<msg timestamp="20231114 10:31:33.228" level="FAIL">Could not connect to the playwright process at port 49400.</msg>
+<status status="FAIL" starttime="20231114 10:30:36.150" endtime="20231114 10:31:33.228"/>
+</kw>
+<status status="FAIL" starttime="20231114 10:30:36.150" endtime="20231114 10:31:33.228">Could not connect to the playwright process at port 49400.</status>
+</kw>
+<tag>aservice</tag>
+<status status="FAIL" starttime="20231114 10:28:42.400" endtime="20231114 10:31:33.228">Setup failed:
+Could not connect to the playwright process at port 49400.
+
+Also teardown failed:
+Could not connect to the playwright process at port 49400.</status>
+</test>
+<doc>Suite de testes de cadastro de dog walker</doc>
+<status status="FAIL" starttime="20231114 10:12:08.361" endtime="20231114 10:32:30.528"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="5" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="2" skip="0">aservice</stat>
+<stat pass="0" fail="1" skip="0">cpf_inv</stat>
+<stat pass="0" fail="1" skip="0">required</stat>
+<stat pass="0" fail="1" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat pass="0" fail="5" skip="0" id="s1" name="Signup">Signup</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20231114 10:13:29.634" level="ERROR">Calling method '_start_suite' of listener 'Browser' failed: Could not connect to the playwright process at port 49400.</msg>
+<msg timestamp="20231114 10:14:27.398" level="ERROR">Calling method '_start_test' of listener 'Browser' failed: Could not connect to the playwright process at port 49400.</msg>
+<msg timestamp="20231114 10:17:19.766" level="ERROR">Calling method '_end_test' of listener 'Browser' failed: Could not connect to the playwright process at port 49400.</msg>
+<msg timestamp="20231114 10:18:16.886" level="ERROR">Calling method '_start_test' of listener 'Browser' failed: Could not connect to the playwright process at port 49400.</msg>
+<msg timestamp="20231114 10:21:07.651" level="ERROR">Calling method '_end_test' of listener 'Browser' failed: Could not connect to the playwright process at port 49400.</msg>
+<msg timestamp="20231114 10:22:04.724" level="ERROR">Calling method '_start_test' of listener 'Browser' failed: Could not connect to the playwright process at port 49400.</msg>
+<msg timestamp="20231114 10:24:55.044" level="ERROR">Calling method '_end_test' of listener 'Browser' failed: Could not connect to the playwright process at port 49400.</msg>
+<msg timestamp="20231114 10:25:51.864" level="ERROR">Calling method '_start_test' of listener 'Browser' failed: Could not connect to the playwright process at port 49400.</msg>
+<msg timestamp="20231114 10:28:42.385" level="ERROR">Calling method '_end_test' of listener 'Browser' failed: Could not connect to the playwright process at port 49400.</msg>
+<msg timestamp="20231114 10:29:39.282" level="ERROR">Calling method '_start_test' of listener 'Browser' failed: Could not connect to the playwright process at port 49400.</msg>
+<msg timestamp="20231114 10:32:30.513" level="ERROR">Calling method '_end_test' of listener 'Browser' failed: Could not connect to the playwright process at port 49400.</msg>
+<msg timestamp="20231114 10:33:27.330" level="ERROR">Calling method '_end_suite' of listener 'Browser' failed: Could not connect to the playwright process at port 49400.</msg>
+</errors>
+</robot>

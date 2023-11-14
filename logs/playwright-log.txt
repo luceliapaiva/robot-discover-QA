@@ -1,0 +1,13 @@
+c:\users\lucelia\appdata\local\programs\python\python38\lib\site-packages\Browser\wrapper\index.js:8256
+  const fn = page?.mouse[methodName].bind(page.mouse);
+                  ^
+
+SyntaxError: Unexpected token '.'
+    at Object.compileFunction (vm.js:344:18)
+    at wrapSafe (internal/modules/cjs/loader.js:1048:15)
+    at Module._compile (internal/modules/cjs/loader.js:1082:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1138:10)
+    at Module.load (internal/modules/cjs/loader.js:982:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:875:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)
+    at internal/main/run_main_module.js:17:47
